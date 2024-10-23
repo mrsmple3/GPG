@@ -219,5 +219,15 @@
 		// Активируем первый таб и его содержимое по умолчанию
 		$('.characteristic__title[data-tab="1"]').addClass("active");
 		$('.characteristic__content[data-content="1"]').show();
+
+		function numberAfter() {
+			$(".numbers .num").each(function () {
+				const afterValue = $(this).data("after");
+
+				// Добавляем правило стилей через jQuery
+				$(this).css("--after-content", `"${afterValue}"`);
+			});
+		}
+		numberAfter();
 	});
 })(jQuery);
