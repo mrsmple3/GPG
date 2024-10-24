@@ -36,6 +36,7 @@
 		if ($minWidthMobile) {
 			gsap.to("header", {
 				background: "white",
+				boxShadow: "0px 4px 50px rgba(0, 0, 0, 0.07)",
 				scrollTrigger: {
 					trigger: ".main-block",
 					start: `${$headerHeight} top`,

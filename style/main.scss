@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
 	margin: 0;
@@ -99,7 +99,7 @@ body {
 	position: relative;
 	width: 100%;
 	@include flex-col-start();
-	font-family: "Poppins", sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: normal;
 	font-style: normal;
@@ -173,7 +173,7 @@ li {
 .main-title {
 	color: white;
 	font-size: size(40px);
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 110%;
 	word-wrap: break-word;
 	@media screen and (max-width: 1050px) {
@@ -383,7 +383,7 @@ header {
 		height: 0; //!
 		@include flex-col-start();
 		gap: size(21px);
-		background: rgba(7.53, 41.51, 72.25, 0.15);
+		background: white;
 		border-radius: 10px;
 		border: 1px rgba(255, 255, 255, 0.2) solid;
 		backdrop-filter: blur(50px);
@@ -495,7 +495,7 @@ header {
 	width: size(292px);
 	color: rgba(255, 255, 255, 0.7);
 	font-size: size(14px);
-	font-family: Poppins, sans-serif;
+	font-family: Montserrat, sans-serif;
 	font-weight: 400;
 	line-height: 152.3%;
 	word-wrap: break-word;
@@ -515,7 +515,7 @@ header {
 .mail {
 	color: rgba(255, 255, 255, 0.9);
 	font-size: size(14px);
-	font-family: Poppins, sans-serif;
+	font-family: Montserrat, sans-serif;
 	font-weight: 600;
 	word-wrap: break-word;
 	margin-bottom: size(30px);
@@ -586,7 +586,11 @@ header {
 		height: 0;
 	}
 }
-
+.wrapper {
+	position: relative;
+	background-color: #f3f3f3;
+	z-index: -1;
+}
 //!main page
 .main-block {
 	position: relative;
@@ -684,37 +688,6 @@ header {
 	height: 0;
 	border: 1px rgba(13.1, 55.74, 92.44, 0.5) solid;
 }
-.numbers {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(size(190px), 1fr));
-	gap: size(66px);
-	padding-top: size(45px);
-	padding-bottom: size(78px);
-	@media screen and (max-width: 1025px) {
-		gap: 37px;
-		padding-top: 50px;
-		padding-bottom: 66px;
-	}
-	.numbers__item {
-		width: 190px;
-		@include flex-col-start();
-		gap: size(10px);
-		@media screen and (max-width: 1025px) {
-			gap: 10px;
-		}
-	}
-	.numbers__sub {
-		width: 100%;
-		color: rgba(255, 255, 255, 0.8);
-		font-size: size(15px);
-		font-weight: 500;
-		line-height: 100%;
-		word-wrap: break-word;
-		@media screen and (max-width: 1050px) {
-			font-size: 14px;
-		}
-	}
-}
 .span-number {
 	color: #32568b;
 	font-size: size(40px);
@@ -804,6 +777,8 @@ header {
 		gap: size(133px);
 		padding: size(25px);
 		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0e304e 100%);
+		border-radius: 5px;
+		overflow: hidden;
 		@media screen and (max-width: 1050px) {
 			gap: 73px;
 			padding: 25px;
@@ -917,6 +892,10 @@ header {
 		}
 	}
 
+	.span-number {
+		color: rgba(255, 255, 255, 0.3);
+	}
+
 	.hope__sub {
 		color: rgba(255, 255, 255, 0.7);
 		font-size: size(18px);
@@ -972,10 +951,11 @@ header {
 		padding-bottom: size(33px);
 		border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
 		@media screen and (max-width: 1050px) {
+			font-size: 16px;
 			padding: 36px 30px;
 			padding-bottom: 50px;
 			border: none;
-			padding-bottom: 0;
+			padding-bottom: 50px;
 		}
 		&::after {
 			content: "";
@@ -992,12 +972,19 @@ header {
 	.numbers {
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		row-gap: size(75px);
 		column-gap: size(66px);
+		grid-template-columns: repeat(2, 1fr);
 		padding: size(55px) size(45px);
 		@media screen and (max-width: 1050px) {
+			row-gap: 37px;
 			padding: 66px 30px;
 			padding-top: 0;
+		}
+		@media screen and (max-width: 450px) {
+			column-gap: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 	.numbers__item {
@@ -1189,7 +1176,7 @@ header {
 		inset: 0;
 		height: 100%;
 		width: 100%;
-		opacity: 5%;
+		opacity: 0.05;
 		z-index: -1;
 	}
 	.line {
@@ -1343,7 +1330,7 @@ footer {
 	.footer__title {
 		color: rgba(255, 255, 255, 0.9);
 		font-size: size(18px);
-		font-family: Poppins, sans-serif;
+		font-family: Montserrat, sans-serif;
 		font-weight: 500;
 		line-height: 152.3%;
 		word-wrap: break-word;
@@ -1363,7 +1350,7 @@ footer {
 	.footer__nav__item {
 		color: rgba(255, 255, 255, 0.7);
 		font-size: size(14px);
-		font-family: Poppins, sans-serif;
+		font-family: Montserrat, sans-serif;
 		font-weight: 500;
 		line-height: 152.3%;
 		word-wrap: break-word;
@@ -1402,7 +1389,7 @@ footer {
 		gap: size(4px);
 		color: rgba(255, 255, 255, 0.5);
 		font-size: size(16px);
-		font-family: Poppins, sans-serif;
+		font-family: Montserrat, sans-serif;
 		font-weight: 400;
 		line-height: 152%;
 		word-wrap: break-word;
@@ -1423,7 +1410,7 @@ footer {
 	.copy {
 		color: rgba(255, 255, 255, 0.7);
 		font-size: size(14px);
-		font-family: Poppins, sans-serif;
+		font-family: Montserrat, sans-serif;
 		font-weight: 400;
 		word-wrap: break-word;
 		@media screen and (max-width: 1050px) {
