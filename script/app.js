@@ -13,17 +13,6 @@
 
 		const $header = $("header");
 		const $headerHeight = $header.outerHeight();
-		const $headerLogo = $("header .logo");
-		const $headerTopHeight = $("header .header__top").outerHeight();
-
-		function handleScroll($setTop) {
-			const scrollTop = $(window).scrollTop();
-			if (scrollTop >= $setTop) {
-				$header.css("top", `-${$setTop}px`);
-			} else {
-				$header.css("top", "0");
-			}
-		}
 
 		gsap.registerPlugin(ScrollTrigger, Observer);
 
@@ -46,49 +35,72 @@
 		//!Header
 		if ($minWidthMobile) {
 			gsap.to("header", {
-				boxShadow: "0px 4px 50px rgba(0, 0, 0, 0.07)",
+				background: "white",
 				scrollTrigger: {
-					trigger: "header .menu",
-					start: "top top",
-					end: "top top",
+					trigger: ".main-block",
+					start: `${$headerHeight} top`,
+					end: `${$headerHeight} top`,
 					scrub: true,
+					onEnter: () => $(".navbar .nav__item").addClass("active"),
+					onEnterBack: () => $(".navbar .nav__item").removeClass("active"),
 				},
 			});
 
-			$("#search_icon").on("click", function () {
-				const $searchForm = $(".search__form");
-				const $searchInput = $searchForm.find("input");
+			let $subTimeOut;
 
-				$searchForm.toggleClass("active");
-				if ($searchForm.hasClass("active")) {
-					$searchInput.focus();
-				}
+			$(".submenu").each(function () {
+				const $submenu = $(this);
+				const $submenuContainer = $(this).find(".submenu__container").first();
+				const $title = $(this).find(".submenu__title").first();
+
+				$title.hover(
+					function () {
+						// over
+						clearTimeout($subTimeOut);
+						$submenu.addClass("active");
+					},
+					function () {
+						// out
+						$submenu.addClass("active");
+						$subTimeOut = setTimeout(() => {
+							$submenu.removeClass("active");
+						}, 300);
+					}
+				);
+
+				$submenuContainer.hover(
+					function () {
+						// over
+						clearTimeout($subTimeOut);
+					},
+					function () {
+						// out
+						$subTimeOut = setTimeout(() => {
+							$submenu.removeClass("active");
+						}, 300);
+					}
+				);
 			});
+		} else {
+			$(".submenu").each(function () {
+				const $submenu = $(this);
+				const $submenuContainer = $(this).find(".submenu__container").first();
+				const $title = $(this).find(".submenu__title").first();
 
-			$(".search__form__close").on("click", function () {
-				$(".search__form").removeClass("active");
-			});
-
-			$(window).on("scroll", handleScroll);
-
-			Observer.create({
-				target: window,
-				type: "wheel,touch,scroll",
-				onUp: () => {
-					handleScroll("0");
-				},
-				onDown: () => {
-					handleScroll($headerTopHeight);
-				},
+				$title.on("click", function (event) {
+					event.preventDefault();
+					if ($submenu.hasClass("active")) {
+						$submenu.removeClass("active");
+						console.log($title, "remove");
+					} else {
+						$submenu.addClass("active");
+						console.log($title, "add");
+					}
+				});
 			});
 		}
 
 		//!Mobile Dropdown
-		$(".dropdown-lang").click(function (event) {
-			event.stopPropagation();
-			$(this).toggleClass("active");
-		});
-
 		$(".menu-btn").click(function (event) {
 			$(this).toggleClass("active");
 			$(".mobile-menu").toggleClass("active");
@@ -132,17 +144,6 @@
 				observer.observe(this);
 			});
 		}
-
-		//!Filter
-		$(".filter__dropdown__item").on("click", function () {
-			// Получаем значение выбранного элемента
-			var selectedValue = $(this).val();
-			// Находим родительский элемент .filter__dropdown
-			var $dropdown = $(this).closest(".filter__dropdown");
-			// Обновляем значение поля .dropdown__current в этом выпадающем списке
-			$dropdown.find(".dropdown__current").val(selectedValue);
-			$dropdown.removeClass("active");
-		});
 
 		if (!$minWidthMobile) {
 			$(".dropdown__current").on("click", function () {

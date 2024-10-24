@@ -32,7 +32,18 @@
 			</a>
 			<nav class="navbar">
 				<a href="" class="nav__item">Главная</a>
-				<a href="" class="nav__item">Каталог</a>
+				<div class="submenu">
+					<a href="" class="nav__item submenu__title">Каталог</a>
+					<div class="submenu__container">
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для легковой и легкой коммерческой техники</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для дизельных двигателей</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Трансмиссионные масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Гидравлические масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Фильтры</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Антифриз</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Тормозная жидкость</a>
+					</div>
+				</div>
 				<a href="" class="nav__item">О компании</a>
 				<a href="" class="nav__item">Партнеры</a>
 				<a href="" class="nav__item">Новости</a>
@@ -47,7 +58,18 @@
 		<div class="mobile-menu">
 			<div class="mobile-menu__navbar">
 				<a href="" class="navbar__item">Главная</a>
-				<a href="" class="navbar__item">Каталог</a>
+				<div class="submenu">
+					<a href="" class="nav__item submenu__title">Каталог</a>
+					<div class="submenu__container">
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для легковой и легкой коммерческой техники</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для дизельных двигателей</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Трансмиссионные масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Гидравлические масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Фильтры</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Антифриз</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Тормозная жидкость</a>
+					</div>
+				</div>
 				<a href="" class="navbar__item">О компании</a>
 				<a href="" class="navbar__item">Лаборатория</a>
 				<a href="" class="navbar__item">Партнеры</a>
@@ -192,6 +214,7 @@
 			<div class="line"></div>
 			<div class="flex-end">
 				<div class="flex-col-start">
+					<span class="span-number not-desktop">[ 03 ]</span>
 					<span class="span-text">ТЕХНОЛОГИИ И ОБОРУДОВАНИЕ</span>
 					<h2 class="block-title"><span>Модернизация и новый уровень</span></h2>
 					<img src="./assets/imgs/logo.svg" alt="" class="tech__img" />
@@ -203,7 +226,7 @@
 				<div class="flex-col-start">
 					<div class="flex-center">
 						<span class="tech__label">Гарантия качества</span>
-						<span class="span-number">[ 03 ]</span>
+						<span class="span-number not-mobile">[ 03 ]</span>
 					</div>
 					<img src="./assets/imgs/defence.svg" alt="" class="tech__img" />
 					<p class="tech__sub">
@@ -232,14 +255,16 @@
 		</div>
 
 		<div class="news">
+			<div class="line"></div>
+			<img src="./assets/imgs/category-bg.png" alt="" class="news-bg" />
 			<span class="span-text">НОВОСТИ</span>
 			<div class="flex-center">
-				<h2 class="block-title">Последние новости компании</h2>
-				<a href="./news.html" class="all__news">Все новости</a>
+				<h2 class="block-title"><span>Последние новости компании</span></h2>
+				<a href="./news.html" class="all__news not-mobile">Все новости</a>
 			</div>
 
 			<div class="news__cards">
-				<div class="news__card">
+				<a href="./news__item.html" class="news__card">
 					<img src="./assets/imgs/new-img.png" alt="" class="news-img" />
 					<h4 class="news__title">Тестовая новость бренда GPG</h4>
 					<p class="news__sub">
@@ -247,8 +272,37 @@
 						сентября.
 					</p>
 					<span class="news__date">24.07.2023</span>
-				</div>
+				</a>
+				<a href="./news__item.html" class="news__card">
+					<img src="./assets/imgs/new-img.png" alt="" class="news-img" />
+					<h4 class="news__title">Тестовая новость бренда GPG</h4>
+					<p class="news__sub">
+						Бренд высокотехнологичных масел выступил официальным техническим партнером Чемпионата России по ралли-рейдам, который пройдёт в Поволжье с 19 по 24
+						сентября.
+					</p>
+					<span class="news__date">24.07.2023</span>
+				</a>
+				<a href="./news__item.html" class="news__card">
+					<img src="./assets/imgs/new-img.png" alt="" class="news-img" />
+					<h4 class="news__title">Тестовая новость бренда GPG</h4>
+					<p class="news__sub">
+						Бренд высокотехнологичных масел выступил официальным техническим партнером Чемпионата России по ралли-рейдам, который пройдёт в Поволжье с 19 по 24
+						сентября.
+					</p>
+					<span class="news__date">24.07.2023</span>
+				</a>
+				<a href="./news__item.html" class="news__card">
+					<img src="./assets/imgs/new-img.png" alt="" class="news-img" />
+					<h4 class="news__title">Тестовая новость бренда GPG</h4>
+					<p class="news__sub">
+						Бренд высокотехнологичных масел выступил официальным техническим партнером Чемпионата России по ралли-рейдам, который пройдёт в Поволжье с 19 по 24
+						сентября.
+					</p>
+					<span class="news__date">24.07.2023</span>
+				</a>
 			</div>
+			<a href="./news.html" class="all__news not-desktop">Все новости</a>
+			<div class="line"></div>
 		</div>
 
 		<!-- footer -->
