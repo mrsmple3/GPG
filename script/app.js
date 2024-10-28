@@ -11,6 +11,7 @@
 			return (px / conversionFactor) * index;
 		}
 
+		const $headerLogo = $("header .logo__container");
 		const $header = $("header");
 		const $headerHeight = $header.outerHeight();
 
@@ -42,8 +43,14 @@
 					start: `${$headerHeight} top`,
 					end: `${$headerHeight} top`,
 					scrub: true,
-					onEnter: () => $(".navbar .nav__item").addClass("active"),
-					onEnterBack: () => $(".navbar .nav__item").removeClass("active"),
+					onEnter: () => {
+						$(".navbar .nav__item").addClass("active");
+						$headerLogo.addClass("active");
+					},
+					onEnterBack: () => {
+						$(".navbar .nav__item").removeClass("active");
+						$headerLogo.removeClass("active");
+					},
 				},
 			});
 

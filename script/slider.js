@@ -7,9 +7,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	let minWidthMobile = window.innerWidth < 1025 ? false : true;
 
+	// Функция для обновления слайдера, если он существует
+	function updateSlider(sliderInstance, selector) {
+		if (document.querySelector(selector)) {
+			sliderInstance.update();
+		}
+	}
+
 	window.addEventListener("resize", function () {
 		minWidthMobile = window.innerWidth < 1025 ? false : true;
 		updateSlider(sliderCatalogItem, ".swiper.main-slider");
+		updateSlider(swiperCertificates, ".swiper.certificates__slider");
+		updateSlider(swiperRecommendation, ".recommendation__slider");
+		updateSlider(swiperNews, ".news__card__slider");
 	});
 
 	const sliderCatalogItem = new Swiper(".swiper.catalog__item__slider", {
@@ -58,16 +68,5 @@ document.addEventListener("DOMContentLoaded", function () {
 		speed: 1300,
 		spaceBetween: size(20),
 		loop: true,
-	});
-
-	const swiperProduct = new Swiper(".swiper.product__slider__container", {
-		navigation: {
-			nextEl: ".product__slider__btn.next",
-			prevEl: ".product__slider__btn.prev",
-		},
-		direction: "vertical",
-		slidesPerView: 4,
-		speed: 1300,
-		spaceBetween: minWidthMobile ? size(10) : 10,
 	});
 });

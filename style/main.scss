@@ -40,7 +40,7 @@ $conversion-factor: 24px;
 	line-height: 100%;
 	word-wrap: break-word;
 	white-space: nowrap;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	@media screen and (max-width: 1050px) {
 		font-size: 16px;
 		padding: $py $px;
@@ -237,6 +237,12 @@ li {
 		background-color: #fff;
 		border-radius: 7px;
 		z-index: -1;
+		transition: all 0.5s;
+	}
+	&:hover {
+		&::before {
+			width: 102%;
+		}
 	}
 }
 
@@ -296,6 +302,12 @@ header {
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
 		z-index: -1;
+		transition: all 0.5s;
+	}
+	&.active {
+		&::before {
+			top: 23%;
+		}
 	}
 	img {
 		min-width: max-content;
@@ -399,10 +411,10 @@ header {
 		height: 0; //!
 		@include flex-col-start();
 		gap: size(21px);
-		background: white;
+		background: rgba(7.53, 41.51, 72.25, 0.15);
+		backdrop-filter: blur(50px);
 		border-radius: 10px;
 		border: 1px rgba(255, 255, 255, 0.2) solid;
-		backdrop-filter: blur(50px);
 		padding: 0 size(30px); //!
 		overflow: hidden; //!
 		opacity: 0; //!
@@ -465,6 +477,9 @@ header {
 }
 .request__btn {
 	@include btn(21.5px, 53px, linear-gradient(270deg, #32568b 0%, #0d385c 100%), #fff);
+	&:hover {
+		transform: scale(1.05);
+	}
 	@media screen and (max-width: 1365px) {
 		padding-left: size(20px);
 		padding-right: size(20px);
@@ -704,6 +719,13 @@ header {
 		gap: size(10px);
 		@include btn(20px, 55.5px, transparent, #fff);
 		border: 1px solid #fff;
+		&:hover {
+			background: white;
+			color: $main-color;
+			.arrow-right-think {
+				filter: invert(14%) sepia(14%) saturate(4899%) hue-rotate(180deg) brightness(96%) contrast(94%);
+			}
+		}
 	}
 }
 .line {
@@ -802,6 +824,10 @@ header {
 		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0e304e 100%);
 		border-radius: 5px;
 		overflow: hidden;
+		transition: all 0.5s;
+		&:hover {
+			box-shadow: 5px -5px 20px rgb(0, 0, 0, 0.8);
+		}
 		@media screen and (max-width: 1050px) {
 			gap: 73px;
 			padding: 25px;
@@ -944,10 +970,19 @@ header {
 	}
 	.about__btn {
 		@include btn(22.5px, 51.5px, #fff, #0d2e4a);
+		border: 1px solid white;
+		&:hover {
+			background: transparent;
+			color: white;
+		}
 	}
 	.partners__btn {
 		@include btn(22.5px, 51.5px, transparent, #fff);
 		border: 1px solid #fff;
+		&:hover {
+			background: $main-color;
+			border-color: $main-color;
+		}
 	}
 	.hope__numbers {
 		width: size(529px);
@@ -1180,6 +1215,10 @@ header {
 	.request__btn {
 		@include btn(22.5px, 51.5px, transparent, #fff);
 		border: 1px solid #fff;
+		&:hover {
+			background: #fff;
+			color: $main-color;
+		}
 	}
 }
 
@@ -1404,7 +1443,6 @@ header {
 	.news__card__title {
 		color: rgba(0, 0, 0, 0.8);
 		font-size: size(23px);
-		font-family: Poppins, sans-serif;
 		font-weight: 300;
 		line-height: 100%;
 		word-wrap: break-word;
@@ -1603,12 +1641,8 @@ footer {
 		top: 0;
 		left: 0;
 		width: 100%;
-		max-height: 100%;
-		height: size(299px);
+		height: 100%;
 		z-index: -1;
-		@media screen and (max-width: 1050px) {
-			height: 242px;
-		}
 	}
 	.span-text {
 		color: rgba(255, 255, 255, 0.7);
@@ -1722,7 +1756,9 @@ footer {
 	.filter__item {
 		background-color: #ffffff;
 		border-bottom: 1px #dedede solid;
-		&.active {
+		transition: all 0.5s;
+		&.active,
+		&:hover {
 			@media screen and (min-width: 1050px) {
 				background-color: #c1e2ff;
 			}
@@ -1865,9 +1901,11 @@ footer {
 	width: 100%;
 	@include flex-center();
 	gap: 10px;
+	margin-bottom: size(76px);
 	@media screen and (max-width: 1050px) {
 		@include flex-col-start();
 		gap: 38px;
+		margin-bottom: 62px;
 	}
 	.slider {
 		position: relative;
@@ -1928,7 +1966,6 @@ footer {
 .catalog__item__top__content {
 	width: size(697px);
 	@include flex-col-start();
-	margin-bottom: size(76px);
 	@media screen and (max-width: 1050px) {
 		width: 100%;
 		margin-bottom: 62px;
@@ -2125,7 +2162,7 @@ footer {
 	.recommendation__title {
 		color: rgba(0, 0, 0, 0.8);
 		font-size: size(23px);
-		font-family: Poppins, sans-serif;
+		font-family: "Montserrat", sans-serif;
 		font-weight: 300;
 		line-height: 100%;
 		word-wrap: break-word;
@@ -2167,6 +2204,69 @@ footer {
 		@media screen and (max-width: 1050px) {
 			@include flex-col-start();
 			margin-bottom: 48px;
+		}
+	}
+	.certificats {
+		width: 100%;
+		height: size(340px);
+		@include flex-stretch();
+		justify-content: space-between;
+		margin-bottom: size(71px);
+		@media screen and (max-width: 1050px) {
+			height: auto;
+			@include flex-col-start();
+			gap: 28px;
+			margin-bottom: 58px;
+		}
+	}
+	.about__img {
+		width: size(633px);
+		@media screen and (max-width: 1050px) {
+			width: 100%;
+			height: max-content;
+			max-height: 209px;
+		}
+	}
+	.certificats__content {
+		@include flex-stretch();
+		gap: size(61px);
+		@media screen and (max-width: 1050px) {
+			width: 100%;
+			justify-content: space-between;
+			gap: 28px;
+		}
+		&::before {
+			content: " ";
+			width: 0;
+			height: 100%;
+			border-left: 1px #32568b solid;
+			@media screen and (max-width: 1050px) {
+				display: none;
+			}
+		}
+	}
+	.certificate__img {
+		width: size(225px);
+		height: size(340px);
+		@media screen and (max-width: 1050px) {
+			width: 181px;
+			height: 273px;
+		}
+	}
+	.certificats__span {
+		width: size(24px);
+		-ms-writing-mode: vertical-rl;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		white-space: nowrap;
+		color: rgba(49.88, 85.6, 139.19, 0.5);
+		font-size: size(16px);
+		font-family: Montserrat;
+		font-weight: 400;
+		line-height: 150%;
+		word-wrap: break-word;
+		@media screen and (max-width: 1050px) {
+			display: none;
 		}
 	}
 	.sub {
@@ -2388,7 +2488,7 @@ footer {
 	.contact__phone {
 		color: #637388;
 		font-size: size(24px);
-		font-family: Poppins, sans-serif;
+		font-family: "Montserrat", sans-serif;
 		font-weight: 400;
 		line-height: size(33.6px);
 		word-wrap: break-word;
@@ -2563,7 +2663,6 @@ footer {
 	.distributer__item__title {
 		color: rgba(0, 0, 0, 0.7);
 		font-size: size(16px);
-		font-family: Poppins, sans-serif;
 		font-weight: 300;
 		line-height: 100%;
 		word-wrap: break-word;
@@ -2586,7 +2685,6 @@ footer {
 		@include flex-col-start();
 		color: rgba(0, 0, 0, 0.7);
 		font-size: size(14px);
-		font-family: Poppins, sans-serif;
 		font-weight: 300;
 		line-height: 180%;
 		word-wrap: break-word;
