@@ -7,58 +7,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	let minWidthMobile = window.innerWidth < 1025 ? false : true;
 
-	// Функция для обновления слайдера, если он существует
-	function updateSlider(sliderInstance, selector) {
-		if (document.querySelector(selector)) {
-			sliderInstance.update();
-		}
-	}
-
 	window.addEventListener("resize", function () {
 		minWidthMobile = window.innerWidth < 1025 ? false : true;
-		updateSlider(sliderMainImgs, ".swiper.main-slider");
+		updateSlider(sliderCatalogItem, ".swiper.main-slider");
 	});
 
-	function updateFractionPosition(index = 1) {
-		const btnTop = $(".main-block .replacer__btns").eq(index).offset().top;
-		const btnHeight = $(".main-block .replacer__btns").eq(index).height();
-
-		const fractionTop = $(".main-block .offer__structure.replacer").eq(index).offset().top;
-
-		if (minWidthMobile) {
-			$(".main-block .offer__structure.original").css("top", `${fractionTop}px`);
-		} else {
-			$(".main-block .offer__structure.original .swiper-fraction").css("top", `-${btnHeight / 2 + 72}px`);
-			$(".main-block .offer__structure.original").css("top", `${btnTop + btnHeight + 72}px`);
-		}
-		$(".main-block .btns").css("top", `${btnTop}px`);
-	}
-
-	const sliderMainImgs = new Swiper(".swiper.main-slider", {
+	const sliderCatalogItem = new Swiper(".swiper.catalog__item__slider", {
 		pagination: {
-			el: ".main-slider .swiper-fraction",
-			type: "fraction",
+			el: ".catalog__item__top .swiper-fraction",
+			clickable: true,
 		},
 		navigation: {
-			nextEl: ".main-slider .btns__next",
-			prevEl: ".main-slider .btns__prev",
+			nextEl: ".catalog__item__top .next",
+			prevEl: ".catalog__item__top .prev",
 		},
 		slidesPerView: 1,
 		initialSlide: 0,
 		speed: 1300,
-		parallax: true,
-		spaceBetween: 1,
 		loop: true,
-		on: {
-			init: function () {
-				updateFractionPosition(this.realIndex);
-			},
-			// slideChange: function () {
-			// 	setTimeout(() => {
-			// 		updateFractionPosition(this.realIndex);
-			// 	}, 200);
-			// },
-		},
 	});
 
 	const swiperCertificates = new Swiper(".swiper.certificates__slider", {
@@ -77,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			nextEl: ".recommendation__btn.next",
 			prevEl: ".recommendation__btn.prev",
 		},
-		slidesPerView: minWidthMobile ? 4 : 2,
+		slidesPerView: minWidthMobile ? 5 : 2,
 		speed: 1300,
-		spaceBetween: size(20),
+		spaceBetween: size(37),
 		loop: true,
 	});
 

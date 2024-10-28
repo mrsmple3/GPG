@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./assets/imgs/logo.svg" type="image/x-icon" />
+
+		<link rel="stylesheet" href="./style/swiper.min.css" />
+		<link rel="stylesheet" href="./style/main.css" />
+
+		<!-- script  -->
+		<script src="./script/lib/jquery-3.7.1.min.js" defer></script>
+		<script src="./script/lib/swiper.min.js" defer></script>
+
+		<!-- gsap -->
+		<script src="./script/lib/gsap/gsap.min.js" defer></script>
+		<script src="./script/lib/gsap/Observer.min.js" defer></script>
+		<script src="./script/lib/gsap/ScrollSmoother.min.js" defer></script>
+		<script src="./script/lib/gsap/ScrollToPlugin.js" defer></script>
+		<script src="./script/lib/gsap/ScrollTrigger.min.js" defer></script>
+
+		<!-- my script  -->
+		<script src="./script/slider.js" defer></script>
+		<script src="./script/app.js" defer></script>
+		<title>GPG</title>
+	</head>
+	<body>
+		<!-- header start -->
+		<header>
+			<a href="./index.html" class="logo__container">
+				<img src="./assets/imgs/logo.svg" alt="" />
+			</a>
+			<nav class="navbar">
+				<a href="./index.html" class="nav__item">Главная</a>
+				<div class="submenu">
+					<a href="./category.html" class="nav__item submenu__title">Каталог</a>
+					<div class="submenu__container">
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для легковой и легкой коммерческой техники</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для дизельных двигателей</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Трансмиссионные масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Гидравлические масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Фильтры</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Антифриз</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Тормозная жидкость</a>
+					</div>
+				</div>
+				<a href="./about.html" class="nav__item">О компании</a>
+				<a href="./partners.html" class="nav__item">Партнеры</a>
+				<a href="./news.html" class="nav__item">Новости</a>
+			</nav>
+			<a href="" class="request__btn">Контакты</a>
+			<div class="menu-btn">
+				<div class="menu-btn__replacer"></div>
+				<img src="./assets/icons/menu-burger.svg" alt="" class="menu-btn__burger" />
+				<img src="./assets/icons/circle-xmark.svg" alt="" class="menu-btn__close" />
+			</div>
+		</header>
+		<div class="mobile-menu">
+			<div class="mobile-menu__navbar">
+				<a href="" class="navbar__item">Главная</a>
+				<div class="submenu">
+					<a href="" class="nav__item submenu__title">Каталог</a>
+					<div class="submenu__container">
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для легковой и легкой коммерческой техники</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для дизельных двигателей</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Трансмиссионные масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Гидравлические масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Фильтры</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Антифриз</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Тормозная жидкость</a>
+					</div>
+				</div>
+				<a href="" class="navbar__item">О компании</a>
+				<a href="" class="navbar__item">Лаборатория</a>
+				<a href="" class="navbar__item">Партнеры</a>
+				<a href="" class="navbar__item">Новости</a>
+				<a href="" class="navbar__item">Контакты</a>
+			</div>
+		</div>
+		<!-- header end -->
+		<div class="wrapper">
+			<div class="top">
+				<img src="./assets/imgs/top-img-news.jpg" alt="" class="top__img" />
+				<span class="span-text">ПАРТНЕРЫ КОМПАНИИ</span>
+				<h1 class="page-title">Ключевые партнеры</h1>
+			</div>
+			<div class="page-wrapper">
+				<div class="line"></div>
+				<div class="partners-page">
+					<p class="sub">Компания Global Petrochemical Group в течении нескольких лет является главным поставщиком таких компании как:</p>
+					<div class="partners__cards">
+						<div class="flex-col-center">
+							<img src="./assets/imgs/partners-1.png" alt="" class="partners__img" />
+							<p class="partners__sub">Навоийский горно-металлургический комбинат</p>
+						</div>
+						<div class="flex-col-center">
+							<img src="./assets/imgs/partners-2.png" alt="" class="partners__img" />
+							<p class="partners__sub">Министерство Республики Узбекистан</p>
+						</div>
+						<div class="flex-col-center">
+							<img src="./assets/imgs/partners-3.png" alt="" class="partners__img" />
+							<p class="partners__sub">Алмалыкский горно-металлургический комбинат</p>
+						</div>
+						<div class="flex-col-center">
+							<img src="./assets/imgs/partners-4.png" alt="" class="partners__img" />
+							<p class="partners__sub">Строительно-монтажные работы</p>
+						</div>
+						<div class="flex-col-center">
+							<img src="./assets/imgs/partners-4.png" alt="" class="partners__img" />
+							<p class="partners__sub">Шуртан нефтехимический завод</p>
+						</div>
+					</div>
+				</div>
+				<div class="line"></div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<footer>
+			<img src="./assets/imgs/footer-img.jpg" alt="" class="footer-img" />
+			<div class="footer__content">
+				<div class="flex-col-start">
+					<h5 class="footer__title">КОМПАНИЯ</h5>
+					<div class="footer__nav">
+						<a href="" class="footer__nav__item">Главная</a>
+						<a href="" class="footer__nav__item">Каталог</a>
+						<a href="" class="footer__nav__item">О компании</a>
+						<a href="" class="footer__nav__item">Партнеры</a>
+						<a href="" class="footer__nav__item">Новости</a>
+						<a href="" class="footer__nav__item">Дистрибьюторы</a>
+						<a href="" class="footer__nav__item">Контакты</a>
+					</div>
+				</div>
+				<div class="flex-col-start">
+					<h5 class="footer__title">ПРОДУКЦИЯ</h5>
+					<div class="footer__nav">
+						<a href="" class="footer__nav__item">Моторные масла для легковой и легкой коммерческой техники</a>
+						<a href="" class="footer__nav__item">Моторные масла для дизельных двигателей</a>
+						<a href="" class="footer__nav__item">Трансмиссионные масла</a>
+						<a href="" class="footer__nav__item">Гидравлические масла</a>
+					</div>
+				</div>
+				<div class="flex-col-start">
+					<h5 class="footer__title">ПРОДУКЦИЯ</h5>
+					<div class="footer__nav">
+						<a href="" class="footer__nav__item">Фильтры</a>
+						<a href="" class="footer__nav__item">Антифриз</a>
+						<a href="" class="footer__nav__item">Тормозная жидкость</a>
+					</div>
+				</div>
+				<div class="flex-col-start">
+					<h5 class="footer__title">КОНТАКТЫ</h5>
+					<div class="footer__nav">
+						<div class="phone">
+							<span class="phone__sub">Номер телефона</span>
+							<a href="tel:+998 71 281 49 30" class="phone__link">+998 71 281 49 30</a>
+							<a href="tel:+998 71 203 20 31" class="phone__link">+998 71 203 20 31</a>
+						</div>
+						<p class="address">
+							<span>Адрес</span> <br />
+							100070, Республика Узбекистан, г. Ташкент, Яккасарайский р-н, ул. Глинка 14/3
+						</p>
+						<a href="mailto:info@gpggroup.uz" class="mail">info@gpggroup.uz</a>
+						<div class="socmedia">
+							<a href="" target="_blank" class="soc__item"><img src="./assets/icons/socmedia-1.svg" alt="" /></a>
+							<a href="" target="_blank" class="soc__item"><img src="./assets/icons/socmedia-2.svg" alt="" /></a>
+							<a href="" target="_blank" class="soc__item"><img src="./assets/icons/socmedia-3.svg" alt="" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer__bottom">
+				<a href="./index.html" class="logo__container">
+					<img src="./assets/imgs/logo-white.svg" alt="" />
+				</a>
+				<a href="http://icorp.uz" target="_blank" class="icorp"> <img src="./assets/icons/icorp.svg" alt="" />Разработано iCORP </a>
+				<span class="copy">© 2024 | Все права защищены</span>
+			</div>
+		</footer>
+	</body>
+</html>

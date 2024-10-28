@@ -197,14 +197,37 @@
 			updateCurrentImage($(this));
 		});
 
-		$(".distributer__item").on("click", function () {
-			if ($(this).hasClass("active")) {
-				$(".distributer__item").removeClass("active");
-			} else {
-				$(".distributer__item").removeClass("active");
-				$(this).addClass("active");
+		//Filter
+		function filterFunction() {
+			const defaultItem = $(".filter__container .filter__item").first();
+			$(".filter__item.current .filter__item__title").text(defaultItem.find(".filter__item__title").text());
+			$(".filter__item.current .filter__item__logo").attr("src", defaultItem.find(".filter__item__logo").attr("src"));
+
+			// Выполнение только при ширине экрана < 1050px
+			if (!$minWidthMobile) {
+				$(".filter__item.current").on("click", function (event) {
+					event.preventDefault();
+					$(this).toggleClass("active");
+					$(".filter .filter__container").toggleClass("active");
+				});
+
+				$(".filter__container .filter__item").on("click", function (event) {
+					event.preventDefault();
+
+					// Смена выбранного текста и логотипа на кликнутый элемент
+					const selectedTitle = $(this).find(".filter__item__title").text();
+					const selectedLogo = $(this).find(".filter__item__logo").attr("src");
+
+					$(".filter__item.current .filter__item__title").text(selectedTitle);
+					$(".filter__item.current .filter__item__logo").attr("src", selectedLogo);
+
+					// Закрыть меню и убрать активный класс
+					$(".filter .filter__container").removeClass("active");
+					$(".filter__item.current").removeClass("active");
+				});
 			}
-		});
+		}
+		filterFunction();
 
 		$(".characteristic__title").on("click", function () {
 			$(".characteristic__title").removeClass("active");
@@ -222,6 +245,7 @@
 		$('.characteristic__title[data-tab="1"]').addClass("active");
 		$('.characteristic__content[data-content="1"]').show();
 
+		//!number::after
 		function numberAfter() {
 			$(".numbers .num").each(function () {
 				const afterValue = $(this).data("after");
@@ -231,5 +255,14 @@
 			});
 		}
 		numberAfter();
+
+		$(".distributer__item").on("click", function () {
+			if ($(this).hasClass("active")) {
+				$(".distributer__item").removeClass("active");
+			} else {
+				$(".distributer__item").removeClass("active");
+				$(this).addClass("active");
+			}
+		});
 	});
 })(jQuery);

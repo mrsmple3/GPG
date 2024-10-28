@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./assets/imgs/logo.svg" type="image/x-icon" />
+
+		<link rel="stylesheet" href="./style/swiper.min.css" />
+		<link rel="stylesheet" href="./style/main.css" />
+
+		<!-- script  -->
+		<script src="./script/lib/jquery-3.7.1.min.js" defer></script>
+		<script src="./script/lib/swiper.min.js" defer></script>
+
+		<!-- gsap -->
+		<script src="./script/lib/gsap/gsap.min.js" defer></script>
+		<script src="./script/lib/gsap/Observer.min.js" defer></script>
+		<script src="./script/lib/gsap/ScrollSmoother.min.js" defer></script>
+		<script src="./script/lib/gsap/ScrollToPlugin.js" defer></script>
+		<script src="./script/lib/gsap/ScrollTrigger.min.js" defer></script>
+
+		<!-- my script  -->
+		<script src="./script/slider.js" defer></script>
+		<script src="./script/app.js" defer></script>
+		<title>GPG</title>
+	</head>
+	<body>
+		<!-- header start -->
+		<header>
+			<a href="./index.html" class="logo__container">
+				<img src="./assets/imgs/logo.svg" alt="" />
+			</a>
+			<nav class="navbar">
+				<a href="./index.html" class="nav__item">Главная</a>
+				<div class="submenu">
+					<a href="./category.html" class="nav__item submenu__title">Каталог</a>
+					<div class="submenu__container">
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для легковой и легкой коммерческой техники</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для дизельных двигателей</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Трансмиссионные масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Гидравлические масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Фильтры</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Антифриз</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Тормозная жидкость</a>
+					</div>
+				</div>
+				<a href="./about.html" class="nav__item">О компании</a>
+				<a href="./partners.html" class="nav__item">Партнеры</a>
+				<a href="./news.html" class="nav__item">Новости</a>
+			</nav>
+			<a href="" class="request__btn">Контакты</a>
+			<div class="menu-btn">
+				<div class="menu-btn__replacer"></div>
+				<img src="./assets/icons/menu-burger.svg" alt="" class="menu-btn__burger" />
+				<img src="./assets/icons/circle-xmark.svg" alt="" class="menu-btn__close" />
+			</div>
+		</header>
+		<div class="mobile-menu">
+			<div class="mobile-menu__navbar">
+				<a href="" class="navbar__item">Главная</a>
+				<div class="submenu">
+					<a href="" class="nav__item submenu__title">Каталог</a>
+					<div class="submenu__container">
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для легковой и легкой коммерческой техники</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Моторные масла для дизельных двигателей</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Трансмиссионные масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Гидравлические масла</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Фильтры</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Антифриз</a>
+						<a href="./catalog__item.html" class="submenu__nav__item">Тормозная жидкость</a>
+					</div>
+				</div>
+				<a href="" class="navbar__item">О компании</a>
+				<a href="" class="navbar__item">Лаборатория</a>
+				<a href="" class="navbar__item">Партнеры</a>
+				<a href="" class="navbar__item">Новости</a>
+				<a href="" class="navbar__item">Контакты</a>
+			</div>
+		</div>
+		<!-- header end -->
+		<div class="wrapper">
+			<div class="top">
+				<img src="./assets/imgs/top-img-catalog-item.jpg" alt="" class="top__img" />
+				<a href="" class="back">Моторные масла для легковой и легкой коммерческой техники</a>
+			</div>
+			<div class="page-wrapper">
+				<div class="line"></div>
+				<div class="catalog__item">
+					<div class="catalog__item__top">
+						<div class="slider">
+							<img src="./assets/icons/arrow-left-blue.svg" alt="" class="prev" />
+							<div class="swiper catalog__item__slider">
+								<div class="swiper-wrapper">
+									<img src="./assets/imgs/catalog-img.png" alt="" class="swiper-slide" />
+									<img src="./assets/imgs/catalog-img.png" alt="" class="swiper-slide" />
+									<img src="./assets/imgs/catalog-img.png" alt="" class="swiper-slide" />
+									<img src="./assets/imgs/catalog-img.png" alt="" class="swiper-slide" />
+								</div>
+							</div>
+							<img src="./assets/icons/arrow-right-blue.svg" alt="" class="next" />
+							<div class="swiper-fraction"></div>
+						</div>
+						<div class="catalog__item__top__content">
+							<span class="catalog__item__top__content__span">Арт. NA251271</span>
+							<h2 class="catalog__item__top__content__title">Sintec Racing SAE 10W-60 ACEA A3/B4 API SN/CF</h2>
+							<div class="catalog__item__top__content__list">
+								<div class="list__item">
+									<span class="list__item__span">Бренд</span>
+									<h3 class="list__item__title">Sintec</h3>
+								</div>
+								<div class="list__item">
+									<span class="list__item__span">Плотность при 15°С, г/см3</span>
+									<h3 class="list__item__title">SAE / 0W-40</h3>
+								</div>
+								<div class="list__item">
+									<span class="list__item__span">Класс вязкости</span>
+									<h3 class="list__item__title">ASTM D4052 / 0,8369</h3>
+								</div>
+								<div class="list__item">
+									<span class="list__item__span">Кинематическая вязкость при 100°С, мм2/с</span>
+									<h3 class="list__item__title">ASTM D445 /14,70</h3>
+								</div>
+							</div>
+							<a href="./contact.html" class="catalog__item__top__content__sub">Свяжитесь с нами для приобретения</a>
+						</div>
+					</div>
+
+					<div class="product__characteristic">
+						<div class="tabs">
+							<h3 class="characteristic__title active" data-tab="1">Описание</h3>
+							<h3 class="characteristic__title" data-tab="2">Характеристики</h3>
+						</div>
+						<div class="characteristic__container">
+							<div class="characteristic__content" data-content="1">
+								<p class="characteristic__content__sub">
+									Полностью синтетическое моторное масло Sintec Premium 9000 0W-40 A3/B4 SP/CF произведено по фирменной технологии UltraSynth с использованием
+									смеси синтетических базовых масел на основе гидрокрекинга (HC), а также полиальфаолефинов (PAO), что обеспечивает низкую испаряемость, высокие
+									индекс вязкости и термоокислительную стабильность, отличную текучесть при низких температурах. Идеально подходит для использования в ДВС с
+									турбонаддувом и непосредственным впрыском.
+									<br /><br />
+									Предотвращает проявление преждевременного воспламенения топливной смеси на низких оборотах (LSPI).
+								</p>
+							</div>
+							<div class="characteristic__content" data-content="2">
+								<div class="characteristic__item">
+									<span class="item__title">Марка</span>
+									<p class="item__sub">Daewoo</p>
+								</div>
+								<div class="characteristic__item">
+									<span class="item__title">Объем двигателя </span>
+									<p class="item__sub">1.6 | 80 kw | 109 hp | 07.2008</p>
+								</div>
+								<div class="characteristic__item">
+									<span class="item__title">Модель</span>
+									<p class="item__sub">NEXIA седан 07.2008</p>
+								</div>
+								<div class="characteristic__item">
+									<span class="item__title">Номер по каталогу</span>
+									<p class="item__sub">K90182695</p>
+								</div>
+								<div class="characteristic__item">
+									<span class="item__title">Страна</span>
+									<p class="item__sub">Узбекистан</p>
+								</div>
+								<div class="characteristic__item">
+									<span class="item__title">Бренд</span>
+									<p class="item__sub">TRT</p>
+								</div>
+								<div class="characteristic__item">
+									<span class="item__title">Артикул бренда</span>
+									<p class="item__sub">R9000R</p>
+								</div>
+								<div class="characteristic__item">
+									<span class="item__title">Базовая единица</span>
+									<p class="item__sub">шт</p>
+								</div>
+								<div class="characteristic__item">
+									<span class="item__title">Категория на сайте</span>
+									<p class="item__sub">Рычаги подвески</p>
+								</div>
+								<div class="characteristic__item">
+									<span class="item__title">Кросс коды OEM</span>
+									<p class="item__sub">96445372 96185972 K90182695 K90375506 96185970 96218398 96445374</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="recommendation">
+						<div class="flex-center">
+							<h3 class="recommendation__title">Рекомендации</h3>
+							<div class="btns">
+								<img src="./assets/icons/arrow-left-blue.svg" alt="" class="recommendation__btn prev" />
+								<img src="./assets/icons/arrow-right-blue.svg" alt="" class="recommendation__btn next" />
+							</div>
+						</div>
+						<div class="swiper recommendation__slider">
+							<div class="swiper-wrapper">
+								<a href="./catalog__item.html" class="swiper-slide catalog__card">
+									<div class="catalog__card__img">
+										<img src="./assets/imgs/catalog-img.png" alt="" />
+									</div>
+									<h5 class="span-text">Sintec Racing SAE 10W-60 ACEA A3/B4 API SN/CF</h5>
+									<p class="catalog__card__sub">Арт. NA251271</p>
+								</a>
+								<a href="./catalog__item.html" class="swiper-slide catalog__card">
+									<div class="catalog__card__img">
+										<img src="./assets/imgs/catalog-img.png" alt="" />
+									</div>
+									<h5 class="span-text">Sintec Racing SAE 10W-60 ACEA A3/B4 API SN/CF</h5>
+									<p class="catalog__card__sub">Арт. NA251271</p>
+								</a>
+								<a href="./catalog__item.html" class="swiper-slide catalog__card">
+									<div class="catalog__card__img">
+										<img src="./assets/imgs/catalog-img.png" alt="" />
+									</div>
+									<h5 class="span-text">Sintec Racing SAE 10W-60 ACEA A3/B4 API SN/CF</h5>
+									<p class="catalog__card__sub">Арт. NA251271</p>
+								</a>
+								<a href="./catalog__item.html" class="swiper-slide catalog__card">
+									<div class="catalog__card__img">
+										<img src="./assets/imgs/catalog-img.png" alt="" />
+									</div>
+									<h5 class="span-text">Sintec Racing SAE 10W-60 ACEA A3/B4 API SN/CF</h5>
+									<p class="catalog__card__sub">Арт. NA251271</p>
+								</a>
+								<a href="./catalog__item.html" class="swiper-slide catalog__card">
+									<div class="catalog__card__img">
+										<img src="./assets/imgs/catalog-img.png" alt="" />
+									</div>
+									<h5 class="span-text">Sintec Racing SAE 10W-60 ACEA A3/B4 API SN/CF</h5>
+									<p class="catalog__card__sub">Арт. NA251271</p>
+								</a>
+								<a href="./catalog__item.html" class="swiper-slide catalog__card">
+									<div class="catalog__card__img">
+										<img src="./assets/imgs/catalog-img.png" alt="" />
+									</div>
+									<h5 class="span-text">Sintec Racing SAE 10W-60 ACEA A3/B4 API SN/CF</h5>
+									<p class="catalog__card__sub">Арт. NA251271</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="line"></div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<footer>
+			<img src="./assets/imgs/footer-img.jpg" alt="" class="footer-img" />
+			<div class="footer__content">
+				<div class="flex-col-start">
+					<h5 class="footer__title">КОМПАНИЯ</h5>
+					<div class="footer__nav">
+						<a href="" class="footer__nav__item">Главная</a>
+						<a href="" class="footer__nav__item">Каталог</a>
+						<a href="" class="footer__nav__item">О компании</a>
+						<a href="" class="footer__nav__item">Партнеры</a>
+						<a href="" class="footer__nav__item">Новости</a>
+						<a href="" class="footer__nav__item">Дистрибьюторы</a>
+						<a href="" class="footer__nav__item">Контакты</a>
+					</div>
+				</div>
+				<div class="flex-col-start">
+					<h5 class="footer__title">ПРОДУКЦИЯ</h5>
+					<div class="footer__nav">
+						<a href="" class="footer__nav__item">Моторные масла для легковой и легкой коммерческой техники</a>
+						<a href="" class="footer__nav__item">Моторные масла для дизельных двигателей</a>
+						<a href="" class="footer__nav__item">Трансмиссионные масла</a>
+						<a href="" class="footer__nav__item">Гидравлические масла</a>
+					</div>
+				</div>
+				<div class="flex-col-start">
+					<h5 class="footer__title">ПРОДУКЦИЯ</h5>
+					<div class="footer__nav">
+						<a href="" class="footer__nav__item">Фильтры</a>
+						<a href="" class="footer__nav__item">Антифриз</a>
+						<a href="" class="footer__nav__item">Тормозная жидкость</a>
+					</div>
+				</div>
+				<div class="flex-col-start">
+					<h5 class="footer__title">КОНТАКТЫ</h5>
+					<div class="footer__nav">
+						<div class="phone">
+							<span class="phone__sub">Номер телефона</span>
+							<a href="tel:+998 71 281 49 30" class="phone__link">+998 71 281 49 30</a>
+							<a href="tel:+998 71 203 20 31" class="phone__link">+998 71 203 20 31</a>
+						</div>
+						<p class="address">
+							<span>Адрес</span> <br />
+							100070, Республика Узбекистан, г. Ташкент, Яккасарайский р-н, ул. Глинка 14/3
+						</p>
+						<a href="mailto:info@gpggroup.uz" class="mail">info@gpggroup.uz</a>
+						<div class="socmedia">
+							<a href="" target="_blank" class="soc__item"><img src="./assets/icons/socmedia-1.svg" alt="" /></a>
+							<a href="" target="_blank" class="soc__item"><img src="./assets/icons/socmedia-2.svg" alt="" /></a>
+							<a href="" target="_blank" class="soc__item"><img src="./assets/icons/socmedia-3.svg" alt="" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer__bottom">
+				<a href="./index.html" class="logo__container">
+					<img src="./assets/imgs/logo-white.svg" alt="" />
+				</a>
+				<a href="http://icorp.uz" target="_blank" class="icorp"> <img src="./assets/icons/icorp.svg" alt="" />Разработано iCORP </a>
+				<span class="copy">© 2024 | Все права защищены</span>
+			</div>
+		</footer>
+	</body>
+</html>
