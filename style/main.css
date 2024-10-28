@@ -1523,6 +1523,15 @@ header {
     padding-top: 0;
   }
 }
+.partners .partners__container .sub {
+  color: white;
+  margin-bottom: calc(1.875 * (1vw + 1vh));
+}
+@media screen and (max-width: 1050px) {
+  .partners .partners__container .sub {
+    margin-bottom: 45px;
+  }
+}
 .partners .block-title {
   color: white;
   margin-bottom: calc(1.6666666667 * (1vw + 1vh));
@@ -1530,15 +1539,6 @@ header {
 @media screen and (max-width: 1050px) {
   .partners .block-title {
     margin-bottom: 37px;
-  }
-}
-.partners .sub {
-  color: white;
-  margin-bottom: calc(1.875 * (1vw + 1vh));
-}
-@media screen and (max-width: 1050px) {
-  .partners .sub {
-    margin-bottom: 45px;
   }
 }
 .partners .request__btn {

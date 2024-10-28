@@ -1197,6 +1197,13 @@ header {
 			width: 100%;
 			padding-top: 0;
 		}
+		.sub {
+			color: white;
+			margin-bottom: size(45px);
+			@media screen and (max-width: 1050px) {
+				margin-bottom: 45px;
+			}
+		}
 	}
 	.block-title {
 		color: white;
@@ -1205,13 +1212,7 @@ header {
 			margin-bottom: 37px;
 		}
 	}
-	.sub {
-		color: white;
-		margin-bottom: size(45px);
-		@media screen and (max-width: 1050px) {
-			margin-bottom: 45px;
-		}
-	}
+
 	.request__btn {
 		@include btn(22.5px, 51.5px, transparent, #fff);
 		border: 1px solid #fff;
